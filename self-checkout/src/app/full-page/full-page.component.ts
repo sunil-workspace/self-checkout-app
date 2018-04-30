@@ -53,12 +53,7 @@ export class FullPageComponent implements OnInit {
     //console.log("Event came from lookup item component: ", itemDetails);
     this.lookupFinishFlow = false;
     this.lookupFinishPayButtons = true;
-    
- 
 
-    //Before adding, check if the same item exists, if exists, 
-    //get the Quantity and increase the quantity by 1
-    //Calculate the price, Price * Quantity
     if (this.itemDetailsArr.length == 0) {
       console.log("Inside if condition for firsttime");
       this.itemDetailsArr.push(itemDetails);
@@ -88,8 +83,6 @@ export class FullPageComponent implements OnInit {
       }
       this.isItemFound = false;
   }
-
-
 
 }
 
