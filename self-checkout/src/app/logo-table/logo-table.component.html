@@ -4,28 +4,27 @@
     <h5 class="selfCheckoutImageText">Self Checkout</h5>
     <img alt="Self Checkout Image" width="150" height="150" src="..\assets\images\cartSymbol.jpg" align="middle">
 </div>
-<div>
-    <br>
-    <span *ngIf="itemsSelectedArr.length > 0">
+
+<br>
+<span *ngIf="itemsSelectedArr.length > 0">
+    <div panel panel-default>
         <!--<span onload="loadItemsToitemsSelectedArr()"></span>-->
-        <table class="table table-hover" style="overflow:auto">
+        <table class="table table-hover itemDisplayTable">
             <thead>
                 <tr>
-                    <th scope="col">Item Name</th>
-                    <th scope="col">Item Price</th>
-                    <th scope="col">Item Quantity</th>
+                    <th scope="col" style="width: 33%;">Item Name</th>
+                    <th scope="col" style="width: 33%;">Item Price</th>
+                    <th scope="col" style="width: 33%;">Item Quantity</th>
                 </tr>
             </thead>
             <tbody>
-              
                 <tr *ngFor="let itemsSelected of itemsSelectedArr">
-                    <td>{{itemsSelected.ITEM_NAME}}</td>
-                    <td>{{itemsSelected.ITEM_PRICE}}</td>
-                    <td>{{itemsSelected.ITEM_QUANTITY}}</td>
+                    <td style="width: 33%;">{{itemsSelected.ITEM_NAME}}</td>
+                    <td style="width: 33%;">{{itemsSelected.ITEM_PRICE}}</td>
+                    <td style="width: 33%;">{{itemsSelected.ITEM_QUANTITY}}</td>
                 </tr>
 
             </tbody>
         </table>
-    </span>
-
-</div>
+    </div>
+</span>

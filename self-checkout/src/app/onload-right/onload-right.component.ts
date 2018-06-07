@@ -28,10 +28,13 @@ notAvalidMember : string = "";
     console.log("Inside displayLookupFinishPayButtonsForMember: ", memberId);
     this.memberidValidatorService.memberIdValidator(memberId).subscribe((response) => {
       console.log("Response came to displayLookupFinishPayButtonsForMember method. Is Member:: ", response.isValidMember); 
-      if(response.isValidMember==true){
+      if(response.isValidMember=="true"){
         this.onClicking.emit();
-      } else{
+      } else if(response.isValidMember == "false"){
         this.notAvalidMember="The entered Member ID is not valid!";
+      } else{
+        this.notAvalidMember = response.isValidMember;
+        this.memberId = "";
       }
 
     });
