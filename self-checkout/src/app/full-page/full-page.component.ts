@@ -47,7 +47,6 @@ export class FullPageComponent implements OnInit {
   onClickingFinishPay() {
     this.lookupFinishPayButtons = false
     //this.finishAndPay=true
-    this.itemDetailsArr-
 
   }
   onClickingItem(itemDetails) {
