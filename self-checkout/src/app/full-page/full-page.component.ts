@@ -64,7 +64,7 @@ export class FullPageComponent implements OnInit {
       this.itemDetailsArr.push(itemDetails);
     } else {
       for (this.itemFoundIndex = 0; this.itemFoundIndex < this.itemDetailsArr.length; this.itemFoundIndex++) {
-        if (this.itemDetailsArr[this.itemFoundIndex]["ITEM_NAME"] === itemDetails["ITEM_NAME"]) {
+        if (this.itemDetailsArr[this.itemFoundIndex]["NAME"] === itemDetails["NAME"]) {
           this.isItemFound = true;
           break;
         }
@@ -78,10 +78,10 @@ export class FullPageComponent implements OnInit {
       console.log("this.isItemFound: ", this.isItemFound, " Index: ", this.itemFoundIndex);
       if(this.isItemFound == true){
         console.log("Found matching item");
-        let quantity = this.itemDetailsArr[this.itemFoundIndex]["ITEM_QUANTITY"];
+        let quantity = this.itemDetailsArr[this.itemFoundIndex]["QUANTITY"];
         quantity = ++quantity;
-        this.itemDetailsArr[this.itemFoundIndex]["ITEM_QUANTITY"] = quantity;
-        this.itemDetailsArr[this.itemFoundIndex]["ITEM_PRICE"] = quantity * itemDetails["ITEM_PRICE"]
+        this.itemDetailsArr[this.itemFoundIndex]["QUANTITY"] = quantity;
+        this.itemDetailsArr[this.itemFoundIndex]["PRICE"] = quantity * itemDetails["PRICE"]
       } else{
         console.log("Not found matching item");
         this.itemDetailsArr.push(itemDetails);

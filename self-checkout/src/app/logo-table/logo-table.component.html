@@ -12,16 +12,18 @@
         <table class="table table-hover itemDisplayTable">
             <thead>
                 <tr>
-                    <th scope="col" style="width: 33%;">Item Name</th>
-                    <th scope="col" style="width: 33%;">Item Price</th>
-                    <th scope="col" style="width: 33%;">Item Quantity</th>
+                    <th scope="col" style="width: 25%;">Item Name</th>
+                    <th scope="col" style="width: 25%;">Price</th>
+                    <th scope="col" style="width: 25%;">Quantity</th>
+                    <th scope="col" style="width: 25%;">Weight</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let itemsSelected of itemsSelectedArr">
-                    <td style="width: 33%;">{{itemsSelected.ITEM_NAME}}</td>
-                    <td style="width: 33%;">{{itemsSelected.ITEM_PRICE}}</td>
-                    <td style="width: 33%;">{{itemsSelected.ITEM_QUANTITY}}</td>
+                    <td style="width: 25%;">{{itemsSelected.NAME}}</td>
+                    <td style="width: 25%;">{{itemsSelected.PRICE}}</td>
+                    <td style="width: 25%;">{{itemsSelected.QUANTITY}}</td>
+                    <td style="width: 25%;">{{itemsSelected.WEIGHT}}</td>
                 </tr>
 
             </tbody>
